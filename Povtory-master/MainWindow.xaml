@@ -1,0 +1,66 @@
+﻿<Window x:Class="Povtory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Povtory"
+        xmlns:localRes="clr-namespace:Povtory.Converters"
+        xmlns:viewmodels="clr-namespace:Povtory.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:BLViewModel}"
+        mc:Ignorable="d"
+        Background="SlateGray"
+        BorderBrush="Black"
+        
+        Title="Поиск повторов" Height="200" Width="530" ResizeMode="NoResize">
+    <Window.Resources>
+        <localRes:BoolConverter x:Key="MyConverter"></localRes:BoolConverter>
+    </Window.Resources>
+    <Grid>
+        <Canvas x:Name="MyCanvas" IsEnabled="{Binding ElementName=progBar, Path=IsVisible, Converter={StaticResource MyConverter}}">
+            <TextBox x:Name="txtbxNewFilePath" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top"
+                     Text="{Binding NewFilePath}"
+                     Height="25" Width="400" 
+                     Margin="30,30,0,0" 
+                     TextWrapping="NoWrap"
+                     VerticalContentAlignment="Center"
+                     />
+    
+            <TextBox x:Name="txtbxOldFilePath" 
+                     HorizontalAlignment="Left" 
+                     Height="25" Width="400" 
+                     Margin="30,80,0,0" 
+                     TextWrapping="NoWrap" 
+                     Text="{Binding OldFilePath}" 
+                     VerticalAlignment="Top"
+                     VerticalContentAlignment="Center"
+                     />
+            <Button x:Name="btnNewOFD" 
+                    Content="..." 
+                    HorizontalAlignment="Left" 
+                    Margin="450,30,0,0" 
+                    VerticalAlignment="Top" 
+                    Height="25" 
+                    Width="40"
+                    Command="{Binding OpenFileDialogCommand}"
+                    CommandParameter="{Binding ElementName=btnNewOFD}"
+                    />
+            <Button x:Name="btnOldOFD" 
+                    Content="..." 
+                    HorizontalAlignment="Left" 
+                    Margin="450,80,0,0" 
+                    VerticalAlignment="Top" 
+                    Height="25" 
+                    Width="40"
+                    Command="{Binding OpenFileDialogCommand}"
+                    CommandParameter="{Binding ElementName=btnOldOFD}"
+                    />
+            <Button x:Name="btnCompare"  Content="Сравнить" Command="{Binding OneExecuteCommand}" CommandParameter="{Binding ElementName=progBar}" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" Height="25" Width="75"/>
+            <ProgressBar x:Name="progBar"  Visibility="Hidden" Height="25" Margin="141,120,119.2,0" VerticalAlignment="Top" Width="263" IsIndeterminate="True"/>
+        </Canvas>
+        <Label x:Name="label" Content="Путь к файлу текущего проезда:" HorizontalAlignment="Left" Margin="30,4,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Путь к файлу прошлого проезда:" HorizontalAlignment="Left" Margin="30,55,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
+

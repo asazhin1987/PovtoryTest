@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Povtory", "D:\Temp\Povtory-master\Povtory.csproj", "{3B465F54-3893-4850-ADE0-B466CE564818}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelComparer.ISvc", "ExcelComparer.ISvc\ExcelComparer.ISvc.csproj", "{92FAFFB7-742B-40EF-AD01-0A927821FF15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparer.DTO", "Comparer.DTO\Comparer.DTO.csproj", "{E19DFDEC-0EC8-4509-8611-B2FB3B9D45F8}"
@@ -15,16 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparer.ServiceOX", "Compa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparer.DI", "Comparer.DI\Comparer.DI.csproj", "{9B2296A1-D7D1-45BC-895D-8F8A3B85D363}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Povtory", "Povtory-master\Povtory.csproj", "{3B465F54-3893-4850-ADE0-B466CE564818}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B465F54-3893-4850-ADE0-B466CE564818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B465F54-3893-4850-ADE0-B466CE564818}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B465F54-3893-4850-ADE0-B466CE564818}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B465F54-3893-4850-ADE0-B466CE564818}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92FAFFB7-742B-40EF-AD01-0A927821FF15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{92FAFFB7-742B-40EF-AD01-0A927821FF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FAFFB7-742B-40EF-AD01-0A927821FF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{9B2296A1-D7D1-45BC-895D-8F8A3B85D363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B2296A1-D7D1-45BC-895D-8F8A3B85D363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B2296A1-D7D1-45BC-895D-8F8A3B85D363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B465F54-3893-4850-ADE0-B466CE564818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B465F54-3893-4850-ADE0-B466CE564818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B465F54-3893-4850-ADE0-B466CE564818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B465F54-3893-4850-ADE0-B466CE564818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
